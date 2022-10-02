@@ -27,16 +27,42 @@
         </aside>
 
         <section id="contenido"><!-- Etiqueta como si fuera el cuerpo de la página --> 
-            <h2>Ejemplo de videos</h2>
+            <h2>Ejemplo de iframes</h2>
             <article>
-                <header><h3>Música celta</h3></header>        
-                <figure><!-- Para imagenes, audios, vídeos -->                    
-                    <video width="320" height="240" controls autoplay muted><!-- Se inicia automaticamente el vídeo, debe ser sin audio para que funcione -->
-                        <source src="videos/torpedo.mp4" type="video/mp4">
-                        Su explorador no soporta el formato del vídeo <code>video</code> tag.
-                    </video>
-                    <figcaption>Realizada en 2022</figcaption>
-                </figure>
+                <header><h3>La página de Fidélitas</h3></header>        
+                <iframe src="https://sistemas.ufidelitas.ac.cr" width="700" height="400">
+
+                </iframe>
+                <footer>Escuela de Sistemas de la Fidé</footer>
+                <br>
+            </article>
+
+            <article>
+                <header><h3>Vídeo de YouTube</h3></header>        
+                <iframe 
+                    width="500" 
+                    height="280" 
+                    src="https://www.youtube.com/embed/kN1XP-Bef7w" 
+                    title="Youtuber" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+                <footer>Alguien mostrando html5</footer>
+                <br>
+            </article>
+
+            <article>
+                <header><h3>STEM Center</h3></header>        
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.980528058154!2d-84.0379415856883!3d9.935577876867413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e3aa66fa362b%3A0xf134cee2340078e2!2sStem%20Center%20Fid%C3%A9litas!5e0!3m2!1sen!2scr!4v1664750971546!5m2!1sen!2scr" 
+                    width="600" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    referrerpolicy="no-referrer-when-downgrade">                        
+                </iframe>
+                <footer>Ubicación del STEM Center en Google Maps</footer>
                 <br>
             </article>
         </section>|
