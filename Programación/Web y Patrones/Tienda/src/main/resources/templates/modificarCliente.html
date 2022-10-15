@@ -12,6 +12,7 @@
         <form th:action="@{/guardarCliente}">
             method="post"
             th:object="${cliente}"
+            <input type="hidden" name="idCliente" th:field="*{idCliente}"/> /*Evitar crear un nuevo cliente*/
             <label for="nombre">Nombre:</label>
             <input type="text" name="nombre" th:field="*{nombre}"/>
             <br/>

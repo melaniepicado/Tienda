@@ -36,4 +36,11 @@ public class IndexController {
         clienteService.save(cliente);
         return "redirect:/";
     }
+    
+    @GetMapping ("/modificarCliente/{idCliente}")
+    public String modificarCliente(Cliente cliente, Model model){
+        cliente = clienteService.getCliente(cliente);
+        model.addAttribute("cliente", cliente);
+        return "modificarCliente";
+    }
 }
