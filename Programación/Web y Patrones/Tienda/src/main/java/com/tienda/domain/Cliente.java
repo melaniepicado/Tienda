@@ -1,11 +1,8 @@
 package com.tienda.domain;
 
 import java.io.Serializable;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*; // "*" trae todo lo que esta dentro de persistence
+
 import lombok.Data;
 
 @Data
@@ -17,7 +14,7 @@ public class Cliente implements Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idcliente;
+    private Long idCliente; //Hibernate lo convierte en id_cliente
     private String nombre, apellidos, correo, telefono;
 
     public Cliente() {

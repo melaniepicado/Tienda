@@ -13,13 +13,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Slf4j
 public class IndexController {
     
-    @Autowired
+    @Autowired //Crea instancia de forma automatica
     private ClienteDao clienteDao;
     
     @GetMapping("/")
     public String inicio(Model model){
         log.info("Estamos usando una arquitectura mvc");
-        
         
         var clientes = clienteDao.findAll();
                 
