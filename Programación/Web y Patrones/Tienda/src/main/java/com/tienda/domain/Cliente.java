@@ -1,8 +1,6 @@
 package com.tienda.domain;
-
 import java.io.Serializable;
 import javax.persistence.*; // "*" trae todo lo que esta dentro de persistence
-
 import lombok.Data;
 
 @Data
@@ -25,5 +23,13 @@ public class Cliente implements Serializable {
         this.apellidos = apellidos;
         this.correo = correo;
         this.telefono = telefono;
+    }
+
+    public Credito getCredito() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public void setCredito(Credito credito) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
