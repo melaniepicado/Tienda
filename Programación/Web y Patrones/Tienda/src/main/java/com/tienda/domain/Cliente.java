@@ -14,6 +14,10 @@ public class Cliente implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idCliente; //Hibernate lo convierte en id_cliente
     private String nombre, apellidos, correo, telefono;
+    
+    @JoinColumn(name="id_credito", referencedColumnName="id_credito")
+    @ManyToOne
+    private Credito credito;
 
     public Cliente() {
     }
@@ -25,11 +29,11 @@ public class Cliente implements Serializable {
         this.telefono = telefono;
     }
 
-    public Credito getCredito() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public void setCredito(Credito credito) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public Cliente(Long idCliente, String apellidos, String correo, String telefono, Credito credito) {
+        this.idCliente = idCliente;
+        this.apellidos = apellidos;
+        this.correo = correo;
+        this.telefono = telefono;
+        this.credito = credito;
     }
 }

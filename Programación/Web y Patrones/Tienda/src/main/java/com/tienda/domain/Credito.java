@@ -15,16 +15,13 @@ public class Credito implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column (name="id_credito")
-    private Long idCredito, limite;
+    private Long idCredito;
+    private Long limite;
 
     public Credito() {
     }
 
     public Credito(Long limite) {
         this.limite = limite;
-    }
-
-    public Credito getCredito() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
