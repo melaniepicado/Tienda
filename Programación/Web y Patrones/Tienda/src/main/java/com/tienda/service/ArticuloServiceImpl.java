@@ -12,10 +12,15 @@ public class ArticuloServiceImpl implements ArticuloService {
     
     @Autowired
     private ArticuloDao articuloDao;
-    
+
     @Override
-    public List<Articulo> getArticulos() {
+    public List<Articulo> getArticulos(boolean activos) {
+        var lista = (List<Articulo>) articuloDao.findAll(); // 4 = 2 A y 2 I
         
+        if (activos) {
+            lista.removeIf(e -> !e.isActivo()); // 2 = 2 I
+        }
+        return lista;
     }
 
     @Override
