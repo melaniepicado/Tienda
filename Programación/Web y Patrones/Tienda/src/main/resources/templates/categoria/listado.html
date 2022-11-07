@@ -15,16 +15,14 @@
                     <thead>
                         <tr>
                             <th>Descripción</th>
-                            <th>Activa</th>
-                            <th>Eliminar</th>
-                            <th>Modificar</th>
+                            <th>Activo</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr th:each="categoria : ${categorias}">
                             <td th:text="${categoria.descripcion}"></td>
                             <td>
-                                <input type="checkbox" name="activa" th:checked="${articulo.activa}" disabled="true"> 
+                                <input type="checkbox" name="activo" th:checked="${articulo.activo}" disabled="true"> 
                             </td>
                             <td><a th:href="@{/categoria/eliminar/} + ${categoria.idCategoria}">Eliminar</a></td>
                             <td><a th:href="@{/categoria/modificar/} + ${categoria.idCategoria}">Modificar</a></td>

@@ -14,12 +14,12 @@
             <form th:action="@{/categoria/guardar}"
                   method="post"
                   th:object="${categoria}">
-                <input type="hidden" name="idCategoria" th:field="*{idCategoria}"/> /*Evitar crear un nuevo categoria*/
+                <input type="hidden" name="idArticulo" th:field="*{idArticulo}"/> /*Evitar crear un nuevo categoria*/
                 <label for="descripcion">Descripción</label>
                 <input type="text" name="descripcion" th:field="*{descripcion}"/>
                 <br/>
                 <label for="activa">Activa</label>
-                <input type="checkbox" name="activa" th:field="*{activa}"/>
+                <input type="checkbox" name="activo" th:field="*{activo}"/>
                 <br/>
                 <input type="submit" name="guardar" value="Guardar"/>
                 <br/>

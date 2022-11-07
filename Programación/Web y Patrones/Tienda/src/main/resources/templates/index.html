@@ -8,36 +8,26 @@
     <body>
         <header th:replace="layout/plantilla :: header"/>
         <div class="contenido">
-            <h2>Listado de clientes</h2>
-            <a th:href="@{/cliente/nuevo}">Nuevo Cliente</a>
-            <div th:if = "${clientes != null and !clientes.empty}">
+            <h2>Nuestros articulos</h2>
+            <div th:if = "${articulos != null and !articulos.empty}">
                 <table border="1">
                     <thead>
                         <tr>
-                            <th>Nombre:</th>
-                            <th>Apellido:</th>
-                            <th>Correo:</th>
-                            <th>Teléfono:</th>
-                            <th>Límite:</th>
-                            <th>Eliminar</th>
-                            <th>Modificar</th>
+                            <th>Descripción</th>
+                            <th>Precio</th>
+                            <th>Comprar</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr th:each="cliente : ${clientes}">
-                            <td th:text="${cliente.nombre}"></td>
-                            <td th:text="${cliente.apellidos}"></td>
-                            <td th:text="${cliente.correo}"></td>
-                            <td th:text="${cliente.telefono}"></td>
-                            <td th:text="${#numbers.formatDecimal(cliente.credito.limite,3,2)}" 
-                                style="text-align: right"></td>
-                            <td><a th:href="@{/cliente/eliminar/} + ${cliente.idCliente}">Eliminar</a></td>
-                            <td><a th:href="@{/cliente/modificar/} + ${cliente.idCliente}">Modificar</a></td>
+                        <tr th:each="articulo : ${articulos}">
+                            <td th:text="${articulo.descripcion}"></td>
+                            <td th:text="${articulo.precio}"></td>
+                            <td><a th:href="@{/carrito/agregar/} + ${articulo.idArticulo}">Agregar</a></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <div th:if="${clientes == null or clientes.empty}">
+            <div th:if="${articulos == null or articulos.empty}">
                 La lista esta vacía
             </div>
         </div>
