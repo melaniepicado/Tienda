@@ -1,19 +1,21 @@
 {
     "elements": {},
     "attributes": {
+        "th:text": {},
         "css": {},
-        "rel": {},
         "th:action": {},
         "xhtml\"": {},
-        "www.w3.org": {},
-        "th:replace": {},
         "menu.css\"": {},
-        "th:href": {},
         "th:field": {},
         "type": {},
         "th:fragment": {
             "context": "header"
         },
+        "th:if": {},
+        "rel": {},
+        "www.w3.org": {},
+        "th:replace": {},
+        "th:href": {},
         "1999": {}
     }
 }
