@@ -1,0 +1,28 @@
+/*DROP SCHEMA techshop;
+DROP USER usuario_prueba;*/
+
+CREATE SCHEMA `techshop`;
+
+CREATE TABLE `techshop`.`cliente` (`id_cliente` INT NOT NULL AUTO_INCREMENT, `nombre` VARCHAR(30) NOT NULL, `apellidos` VARCHAR(50) NOT NULL,
+`correo` VARCHAR(50) NULL, `telefono` VARCHAR(15) NULL, PRIMARY KEY (`id_cliente`))
+ENGINE = innoDB;
+
+/*Insertar 3 registros*/
+INSERT INTO `techshop`.`cliente` (`nombre`, `apellidos`, `correo`, `telefono`)
+	VALUES ('Jonathan', 'Brenes Blanco', 'jbrenes@gmail.com', '8820-2655');
+    
+INSERT INTO `techshop`.`cliente` (`nombre`, `apellidos`, `correo`, `telefono`)
+	VALUES ('Ana', 'Contreras Mora', 'acontreras@gmail.com', '5456-8789');
+    
+INSERT INTO `techshop`.`cliente` (`nombre`, `apellidos`, `correo`, `telefono`)
+	VALUES ('Luis', 'Mena Loria', 'lmena@gmail.com', '7898-893');
+    
+INSERT INTO `techshop`.`cliente` (`nombre`, `apellidos`, `correo`, `telefono`)
+	VALUES ('Fabian', 'Lopez Perez', 'flopez@gmail.com', '7898-893');
+
+/* Crear un usuario */
+CREATE USER 'usuario_prueba' @'%' IDENTIFIED BY 'Usuar1o_Clave.';
+
+/* Se asignan los priviliegios */
+GRANT ALL PRIVILEGES ON techshop.* to 'usuario_prueba';
+flush privileges;
