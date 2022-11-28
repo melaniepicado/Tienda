@@ -11,6 +11,7 @@
         "th:fragment": {
             "context": "header"
         },
+        "th:each": {},
         "th:if": {},
         "rel": {},
         "www.w3.org": {},
