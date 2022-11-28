@@ -9,8 +9,11 @@
         <header th:replace="layout/plantilla :: header"/>
         <div class="contenido">
             <h2>Listado de clientes</h2>
+            <br/>
             <a th:href="@{/cliente/nuevo}">Nuevo Cliente</a>
+            <br/>
             <div th:if = "${clientes != null and !clientes.empty}">
+                <br/>
                 <table border="1">
                     <thead>
                         <tr>
@@ -40,7 +43,9 @@
             <div th:if="${clientes == null or clientes.empty}">
                 La lista esta vacía
             </div>
+            <br/>
+            <a th:href="@{/cliente/encontrar}">Encontrar Cliente según apellidos</a>
         </div>
-        <footer th:replace="layout/plantilla :: footer" />
+        <footer th:replace="layout/plantilla :: footer"/>
     </body>
 </html>

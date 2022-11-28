@@ -40,4 +40,9 @@ public class ArticuloServiceImpl implements ArticuloService {
     public Articulo getArticulo(Articulo articulo) {
         return articuloDao.findById(articulo.getIdArticulo()).orElse(null);
     } 
+
+    @Override
+    public List<Articulo> getPorDescripcion(String descripcion) {
+        return articuloDao.findByDescripcion(descripcion);
+    }
 }

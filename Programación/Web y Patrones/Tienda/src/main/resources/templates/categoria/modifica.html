@@ -14,7 +14,7 @@
             <form th:action="@{/categoria/guardar}"
                   method="post"
                   th:object="${categoria}">
-                <input type="hidden" name="idArticulo" th:field="*{idArticulo}"/> /*Evitar crear un nuevo categoria*/
+                <input type="hidden" name="idcategoria" th:field="*{idcategoria}"/> /*Evitar crear un nuevo categoria*/
                 <label for="descripcion">Descripción</label>
                 <input type="text" name="descripcion" th:field="*{descripcion}"/>
                 <br/>

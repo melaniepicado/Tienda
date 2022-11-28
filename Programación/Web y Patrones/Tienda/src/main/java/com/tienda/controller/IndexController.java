@@ -21,6 +21,11 @@ public class IndexController {
         var articulos = articuloService.getArticulos(true);
                 
         model.addAttribute("articulos", articulos);
-        return "index";
+        return "index";        
+
+//        var articulos = articuloService.getPorDescripcion("AMD 670");
+//                
+//        model.addAttribute("articulos", articulos);
+//        return "index";
     }
 }

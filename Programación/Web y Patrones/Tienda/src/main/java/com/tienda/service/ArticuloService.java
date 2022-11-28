@@ -12,4 +12,6 @@ public interface ArticuloService {
     public void delete(Articulo articulo);
     
     public Articulo getArticulo(Articulo articulo);
+    
+    public List<Articulo> getPorDescripcion(String descripcion);
 }

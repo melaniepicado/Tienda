@@ -2,8 +2,10 @@ package com.tienda.controller;
 
 import com.tienda.domain.Cliente;
 import com.tienda.service.ClienteService;
+import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -46,5 +48,13 @@ public class ClienteController {
     public String eliminarCliente(Cliente cliente){
         clienteService.delete(cliente);
         return "redirect:/cliente/listado";
+    }
+    
+    @GetMapping("/cliente/encontrar")
+    public String encontrarCliente(Model model, @Param("apellidos") String apellidos){
+        List<Cliente> porApellidos = clienteService.getPorApellidos(apellidos);
+        //var apellidos = clienteService.getPorApellidos("");
+        model.addAttribute("porApellidos", porApellidos);
+        return "/cliente/encontrar";
     }
 }

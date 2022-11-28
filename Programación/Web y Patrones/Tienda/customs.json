@@ -11,6 +11,9 @@
         "th:href": {},
         "th:field": {},
         "type": {},
+        "th:fragment": {
+            "context": "header"
+        },
         "1999": {}
     }
 }
