@@ -15,12 +15,13 @@
                   method="post"
                   th:object="${articulo}">
                 <input type="hidden" name="idArticulo" th:field="*{idArticulo}"/> /*Evitar crear un nuevo articulo*/
-                <label for="categoria">Categoría:</label>
+                <label for="categoria" th:text="#{articulo.categoria}">Categoría:</label>
                 <select th:field="*{idCategoria}">
                     <option th:each="categoria: ${categorias}"
                             th:value="${categoria.idCategoria}"
                             th:text="${categoria.descripcion}"/>      
-                </select><br/>
+                </select>
+                <br/>
                 <label for="descripcion" th:text="#{articulo.descripcion}">Descripción</label>
                 <input type="text" name="descripcion" th:field="*{descripcion}"/>
                 <br/>
