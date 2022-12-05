@@ -15,6 +15,7 @@
         "th:if": {},
         "rel": {},
         "www.w3.org": {},
+        "sec:authorize": {},
         "th:replace": {},
         "th:href": {},
         "1999": {}
